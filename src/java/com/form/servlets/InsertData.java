@@ -30,6 +30,7 @@ public class InsertData extends HttpServlet {
         Customer cus = new Customer();
         String cname = request.getParameter("CustomerName");
         String cemail = request.getParameter("CustomerEmail");
+        cemail+="@gmail.com";
         String ccountry = request.getParameter("CustomerCountry");
         
         cus.setCustomerName(cname);

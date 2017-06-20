@@ -35,19 +35,19 @@ public class DeleteData extends HttpServlet {
         try (PrintWriter pw = resp.getWriter()) {
             Customer customer = CustomerDB.getCustomerById(cid);
             
-            pw.println("<div class='form-group'>\n"
+            pw.println("<div class='form-group form-inline'>\n"
                     + "<label class='col-sm-2 control-label' for='uc_name'>Customer Name</label>\n"
                     + "<div class='col-sm-3'>\n"
                     + "<input class='form-control' type='text' name='dc_name' readonly value='" + customer.getCustomerName() + "' id='dc_name'/>\n"
                     + "</div>\n"
                     + "</div>\n"
-                    + "<div class='form-group'>\n"
+                    + "<div class='form-group form-inline'>\n"
                     + "<label class='col-sm-2 control-label' for='uc_email'>Customer Email</label>\n"
                     + "<div class='col-sm-3'>\n"
                     + "<input class='form-control' type='text' name='dc_email' readonly value='" + customer.getCustomerEmail() + "' id='dc_email'/>\n"
                     + "</div>\n"
                     + "</div>\n"
-                    + "<div class='form-group'>\n"
+                    + "<div class='form-group form-inline'>\n"
                     + "<label class='col-sm-2 control-label' for='uc_cntry'>Country</label>\n"
                     + "<div class='col-sm-3'>\n"
                     + "<input class='form-control' type='text' name='dc_cntry' readonly value='" + customer.getCustomerCountry() + "' id='dc_cntry'/>\n"

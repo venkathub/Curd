@@ -36,19 +36,19 @@ public class FetchData extends HttpServlet {
         try (PrintWriter pw = resp.getWriter()) {
             Customer customer = CustomerDB.getCustomerById(cid);
 
-            pw.println("<div class='form-group'>\n"
+            pw.println("<div class='form-group form-inline'>\n"
                     + "<label class='col-sm-2 control-label' for='uc_name'>Customer Name</label>\n"
                     + "<div class='col-sm-3'>\n"
                     + "<input class='form-control' type='text' name='uc_name' value='" + customer.getCustomerName() + "' id='uc_name'/>\n"
                     + "</div>\n"
                     + "</div>\n"
-                    + "<div class='form-group'>\n"
+                    + "<div class='form-group form-inline'>\n"
                     + "<label class='col-sm-2 control-label' for='uc_email'>Customer Email</label>\n"
                     + "<div class='col-sm-3'>\n"
                     + "<input class='form-control' type='text' name='uc_email' value='" + customer.getCustomerEmail() + "' id='uc_email'/>\n"
                     + "</div>\n"
                     + "</div>\n"
-                    + "<div class='form-group'>\n"
+                    + "<div class='form-group form-inline'>\n"
                     + "<label class='col-sm-2 control-label' for='uc_cntry'>Country</label>\n"
                     + "<div class='col-sm-3'>\n"
                     + "<input class='form-control' type='text' name='uc_cntry' value='" + customer.getCustomerCountry() + "' id='uc_cntry'/>\n"

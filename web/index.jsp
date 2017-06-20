@@ -38,19 +38,20 @@
             </div>
             <div id="div1" style="display:none">
                 <form class="form-horizontal" style="padding: 10px">
-                    <div class="form-group ">
+                    <div class="form-group form-inline ">
                         <label class="col-sm-2 control-label" for="a_name">Customer Name</label>
                         <div class="col-sm-3">
                             <input class="form-control" type="text" name="a_name" id="ac_name">
                         </div>
                     </div>
-                    <div class="form-group ">
+                    <div class="form-group form-inline">
                         <label class="col-sm-2 control-label" for="a_email">Customer Email</label>
-                        <div class="col-sm-3">
-                            <input class="form-control" type="text" name="a_email" id="ac_email">
+                        <div class="input-group col-sm-4">
+                            <input class="form-control" type="text" name="a_email" id="ac_email" aria-describedby="basic-addon2">
+                            <span class="input-group-addon" id="basic-addon2">@gmail.com</span>
                         </div>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group form-inline">
                         <label class="col-sm-2 control-label" for="a_cntry">Country</label>
                         <div class="col-sm-3">
                             <select class="form-control" name="a_cntry" id="ac_cntry">
@@ -62,7 +63,7 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <div class="col-sm-5 control-label">
+                        <div class="col-sm-5">
                             <button type="button" class="btn btn-info" id="add">Add</button>
                         </div>
                     </div>
@@ -72,8 +73,12 @@
                 <form class="form-horizontal" style="padding: 10px">
                     <div class="form-inline">
                         <label class="col-sm-2 control-label" for="c_id">Enter Customer ID</label>
-                        <input class="form-control" type="text" name="c_id" id="uc_id">
-                        <button type="button" class="btn btn-info" id="u_fetch">Fetch</button>
+                        <div class="input-group" style="padding: 10px">
+                            <input class="form-control" type="text" name="c_id" id="uc_id">
+                            <span class="input-group-btn">
+                                <button type="button" class="btn btn-default" id="u_fetch">Fetch</button>
+                            </span>
+                        </div>
                         <button type="button" class="btn btn-info" id="update">Update</button>
                     </div>
                     <div class="form-horizontal" id="updateDetails" style="padding: 10px"></div>
@@ -83,8 +88,12 @@
                 <form class="form-horizontal" style="padding: 10px">
                     <div class="form-inline">
                         <label class="col-sm-2 control-label" for="c_id">Enter Customer ID</label>
-                        <input class="form-control" type="text" name="c_id" id="dc_id">
-                        <button type="button" class="btn btn-info" id="d_fetch">Fetch</button>
+                        <div class="input-group" style="padding: 10px">
+                            <input class="form-control" type="text" name="c_id" id="dc_id">
+                            <span class="input-group-btn">
+                            <button type="button" class="btn btn-default" id="d_fetch">Fetch</button>
+                            </span>
+                        </div>
                         <button type="button" class="btn btn-info" id="delete">Delete</button>
                     </div>
                     <div class="form-group" id="deleteDetails" style="padding: 10px"></div>
